@@ -126,4 +126,11 @@
   <data name="CommandUninstallServiceMissingError" xml:space="preserve">
     <value>Command Skipped!! - Service not installed</value>
   </data>
+  <data name="EventLogName" xml:space="preserve">
+    <value>WSTLog</value>
+    <comment>Note: this can only be 8 characters</comment>
+  </data>
+  <data name="EventLogSourceSuffix" xml:space="preserve">
+    <value>Src</value>
+  </data>
 </root>

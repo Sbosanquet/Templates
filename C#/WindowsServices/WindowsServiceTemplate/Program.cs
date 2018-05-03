@@ -260,6 +260,9 @@ namespace WindowsServiceTemplate
         {
             if (IsProcessAdmin())
             {
+                // TODO: Need to uninstall the event log
+
+
                 ManagedInstallerClass.InstallHelper(new String[] { "/u", typeof(Program).Assembly.Location });
             }
             else

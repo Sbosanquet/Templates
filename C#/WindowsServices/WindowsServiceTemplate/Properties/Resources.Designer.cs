@@ -86,5 +86,23 @@ namespace WindowsServiceTemplate.Properties {
                 return ResourceManager.GetString("CommandUninstallServiceMissingError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WSTLog.
+        /// </summary>
+        internal static string EventLogName {
+            get {
+                return ResourceManager.GetString("EventLogName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Src.
+        /// </summary>
+        internal static string EventLogSourceSuffix {
+            get {
+                return ResourceManager.GetString("EventLogSourceSuffix", resourceCulture);
+            }
+        }
     }
 }
