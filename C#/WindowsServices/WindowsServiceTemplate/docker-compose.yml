@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  windowsservicetemplate:
+    image: windowsservicetemplate
+    build:
+      context: .
+      dockerfile: Dockerfile

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceTemplate", "WindowsServiceTemplate.csproj", "{8B28EE9B-179E-455C-8596-D162E7571986}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{82661FAF-CE92-4019-8DCD-1CD7FC731379}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{8B28EE9B-179E-455C-8596-D162E7571986}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B28EE9B-179E-455C-8596-D162E7571986}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B28EE9B-179E-455C-8596-D162E7571986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82661FAF-CE92-4019-8DCD-1CD7FC731379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82661FAF-CE92-4019-8DCD-1CD7FC731379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
