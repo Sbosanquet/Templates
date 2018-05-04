@@ -163,13 +163,13 @@ namespace WindowsServiceTemplate
                         {
                             Console.WriteLine(Properties.Resources.CommandUninstallServiceMissingError);
                         }
-                        
+
                         hasCommands = true;
                     }
                     catch (System.Security.SecurityException)
                     {
                         error = true;
-                    }                    
+                    }
                 }
 
                 // Stop the service
@@ -185,13 +185,13 @@ namespace WindowsServiceTemplate
                         {
                             Console.WriteLine(Properties.Resources.CommandUninstallServiceMissingError);
                         }
-                        
+
                         hasCommands = true;
                     }
                     catch (System.Security.SecurityException)
                     {
                         error = true;
-                    }                    
+                    }
                 }
 
                 // Uninstall the service
@@ -261,7 +261,6 @@ namespace WindowsServiceTemplate
             if (IsProcessAdmin())
             {
                 // TODO: Need to uninstall the event log
-
 
                 ManagedInstallerClass.InstallHelper(new String[] { "/u", typeof(Program).Assembly.Location });
             }
@@ -333,7 +332,6 @@ namespace WindowsServiceTemplate
             }
             else
             {
-                
                 Console.WriteLine(Properties.Resources.CommandAdminElevationError);
                 throw new System.Security.SecurityException(Properties.Resources.CommandAdminElevationException);
             }

@@ -118,6 +118,7 @@
     </None>
     <None Include="App.config" />
     <None Include="Dockerfile" />
+    <None Include="Licence\LICENSE" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -26,8 +26,6 @@ namespace WindowsServiceTemplate
             };
             Installers.Add(process);
             Installers.Add(serviceAdmin);
-
         }
-
     }
 }
