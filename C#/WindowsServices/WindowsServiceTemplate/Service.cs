@@ -40,7 +40,7 @@ namespace WindowsServiceTemplate
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool SetServiceStatus(IntPtr handle, ref ServiceStatus serviceStatus);
 
-        private string eventLogSource;
+        private EventLog serviceEventLog;
 
         public  Service(string Name)
         {       
@@ -48,16 +48,14 @@ namespace WindowsServiceTemplate
 
             this.ServiceName = Name;
 
-            eventLogSource = Name + Properties.Resources.EventLogSourceSuffix;
 
-            eventLog1 = new EventLog();
-            if (!EventLog.SourceExists(eventLogSource))
+            if (!EventLog.SourceExists(Properties.Resources.EventLogServiceSource))
             {
-                EventLog.CreateEventSource(eventLogSource, Properties.Resources.EventLogName);
+                EventLog.CreateEventSource(Properties.Resources.EventLogServiceSource, Properties.Resources.EventLogName);
             }
 
-            eventLog1.Source = eventLogSource;
-            eventLog1.Log = Properties.Resources.EventLogName;
+            serviceEventLog = new EventLog();
+            serviceEventLog.Source = Properties.Resources.EventLogServiceSource;
             
         }
 
@@ -111,9 +109,9 @@ namespace WindowsServiceTemplate
 
         private void WriteEventLogEntry(string Text)
         {
-            if (EventLog.SourceExists(ServiceName))
+            if (EventLog.SourceExists(Properties.Resources.EventLogServiceSource))
             {
-                eventLog1.WriteEntry(Text);
+                serviceEventLog.WriteEntry(Text);
             }
         }
 

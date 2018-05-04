@@ -97,11 +97,11 @@ namespace WindowsServiceTemplate.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Src.
+        ///   Looks up a localized string similar to WSTLogService.
         /// </summary>
-        internal static string EventLogSourceSuffix {
+        internal static string EventLogServiceSource {
             get {
-                return ResourceManager.GetString("EventLogSourceSuffix", resourceCulture);
+                return ResourceManager.GetString("EventLogServiceSource", resourceCulture);
             }
         }
     }

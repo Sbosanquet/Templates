@@ -130,7 +130,8 @@
     <value>WSTLog</value>
     <comment>Note: this can only be 8 characters</comment>
   </data>
-  <data name="EventLogSourceSuffix" xml:space="preserve">
-    <value>Src</value>
+  <data name="EventLogServiceSource" xml:space="preserve">
+    <value>WSTLogService</value>
+    <comment>Note: keep this short</comment>
   </data>
 </root>
