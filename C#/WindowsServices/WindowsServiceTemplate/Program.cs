@@ -25,7 +25,7 @@ namespace WindowsServiceTemplate
             };
 
             // In interactive mode ?
-            if (Environment.UserInteractive)
+            if (Environment.UserInteractive || args.Length != 0)
             {
                 // In debug mode ?
                 if (System.Diagnostics.Debugger.IsAttached && args.Length == 0)
@@ -126,7 +126,7 @@ namespace WindowsServiceTemplate
             try
             {
                 // Runs the service as a console app
-                if (IsCmdLineArgPresent(args, "console"))
+                if (IsCmdLineArgPresent(args, "-console"))
                 {
                     // Simulate the services execution
                     RunInteractiveService(servicesToRun);
@@ -137,7 +137,7 @@ namespace WindowsServiceTemplate
                 bool error = false;
 
                 // Install the service
-                if (IsCmdLineArgPresent(args, "install"))
+                if (IsCmdLineArgPresent(args, "-install"))
                 {
                     try
                     {
@@ -151,7 +151,7 @@ namespace WindowsServiceTemplate
                 }
 
                 // Start the service
-                if (IsCmdLineArgPresent(args, "start"))
+                if (IsCmdLineArgPresent(args, "-start"))
                 {
                     try
                     {
@@ -173,7 +173,7 @@ namespace WindowsServiceTemplate
                 }
 
                 // Stop the service
-                if (IsCmdLineArgPresent(args, "stop"))
+                if (IsCmdLineArgPresent(args, "-stop"))
                 {
                     try
                     {
@@ -195,7 +195,7 @@ namespace WindowsServiceTemplate
                 }
 
                 // Uninstall the service
-                if (IsCmdLineArgPresent(args, "uninstall"))
+                if (IsCmdLineArgPresent(args, "-uninstall"))
                 {
                     try
                     {
@@ -221,11 +221,11 @@ namespace WindowsServiceTemplate
                 {
                     Console.WriteLine("Usage : {0} [command] [command ...]", Environment.GetCommandLineArgs());
                     Console.WriteLine("Commands : ");
-                    Console.WriteLine(" - install : Install the services");
-                    Console.WriteLine(" - uninstall : Uninstall the services");
-                    Console.WriteLine(" - start : Start the service");
-                    Console.WriteLine(" - stop : Stop the services");
-                    Console.WriteLine(" - console : run the service as a console application");
+                    Console.WriteLine(" -install : Install the services");
+                    Console.WriteLine(" -uninstall : Uninstall the services");
+                    Console.WriteLine(" -start : Start the service");
+                    Console.WriteLine(" -stop : Stop the services");
+                    Console.WriteLine(" -console : run the service as a console application");
                 }
             }
             catch (Exception ex)

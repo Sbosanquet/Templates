@@ -123,6 +123,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
     <None Include="WindowsServiceTemplate.sln.startup.json" />
   </ItemGroup>
   <ItemGroup>
