@@ -2,6 +2,8 @@
 
 This basic template is based on a GitHub library by [Peter Kottas](https://github.com/PeterKottas/DotNetCore.WindowsService).  It allows a .NET core app to support for windows services allowing the app to run as either a console app or service on windows.  By using .NET core it also allows the program to run as a standard console application on linux.
 
+Another handy blog for reference is [here](https://blog.csmac.nz/a-windows-service-on-dotnet/).
+
 ## Commands
 The following command line arguments can be used:
 
